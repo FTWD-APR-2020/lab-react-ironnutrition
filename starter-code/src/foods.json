@@ -1,9 +1,8 @@
-[
-  {
+[{
     "name": "Pizza",
     "calories": 400,
     "image": "https://i.imgur.com/eTmWoAN.png",
-    "quantity": 0
+    "quantity": 1
   },
   {
     "name": "Salad",

@@ -1,7 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 
 export default class FoodBox extends Component {
-
   render() {
     return (
       <div>
@@ -9,7 +8,7 @@ export default class FoodBox extends Component {
           <article className="media">
             <div className="media-left">
               <figure className="image is-64x64">
-                <img src={this.props.image} alt={this.props.name}/>
+                <img src={this.props.image} alt={this.props.name} />
               </figure>
             </div>
             <div className="media-content">
@@ -25,20 +24,21 @@ export default class FoodBox extends Component {
                 <div className="control">
                   <input
                     className="input"
-                    type="number" 
-                    value="1"
+                    type="number"
+                    value={this.props.quantity}
+                    onChange={(event) =>
+                      this.props.quantityChangeHandler(event, this.props.index)
+                    }
                   />
                 </div>
                 <div className="control">
-                  <button className="button is-info">
-                    +
-                  </button>
+                  <button className="button is-info">+</button>
                 </div>
               </div>
             </div>
           </article>
         </div>
       </div>
-    )
+    );
   }
 }
